@@ -10,7 +10,6 @@ import AuthContent from "./AuthContent";
 import MessageBox from "../components/MessageBox";
 import { request } from "../helpers/axiosHelper";
 import NavBar from "../components/NavBar";
-import FeatureBlock from "../components/FeatureBlock";
 
 var stompClient = null;
 
@@ -78,7 +77,7 @@ const HomePage = () => {
       {/* aside */}
       <MessageBox />
       {/* main */}
-      <FeatureBlock />
+      {/* <FeatureBlock /> */}
       {/* <div className="mt-14">
         <Routes className="">
           <Route path="" element={<AuthContent />} />

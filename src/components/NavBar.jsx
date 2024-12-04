@@ -9,6 +9,7 @@ const NavBar = () => {
   const { user, logout } = useContext(UserContext);
 
   const [showUserMenu, setShowUserMenu] = useState(false);
+  const [showBookSession, setShowBookSession] = useState(false);
 
   const logOutHandle = () => {
     request("POST", "/api/v1/auth/logout", {}).catch((err) => {
@@ -19,21 +20,24 @@ const NavBar = () => {
 
   return (
     <div className="fixed top-0 left-0 z-10 border-r-0  w-full ">
-      <div className="h-[75px] bg-gray-500 flex justify-between items-center shadow-2xl">
+      <div className="h-[80px] bg-white flex justify-between items-center shadow-md">
         <div className="ml-5">
           {/* header */}
-          <h1 className="text-2xl font-bold text-gray-800">Thoughts</h1>
+          {/* <h1 className="text-2xl font-bold text-gray-800">Thoughts</h1> */}
+          <img src="src/assets/images/logo.png" className="h-[75px]" />
         </div>
-        <div className="flex justify-between items-center gap-x-6">
-        <div>
-Book Session
-        </div>
-        <div>
-Journal
-        </div>
-        <div>Islamestic</div>
-        <div>CBT and More</div>
-        <div>Donate</div>
+        <div className="flex justify-between items-center gap-x-6 text-navText">
+          <Link
+            to=""
+            onMouseEnter={() => setShowBookSession(true)}
+            onMouseLeave={() => setShowBookSession(false)}
+          >
+            Book Session
+          </Link>
+          <div>Journal</div>
+          <div>Islamestic</div>
+          <div>CBT and More</div>
+          <div>Donate</div>
         </div>
 
         <div
@@ -49,7 +53,7 @@ Journal
         </div>
       </div>
       <div
-        className={`h-44 w-36 list-none bg-white divide-y divide-gray-100 text-xs fixed right-2 -mt-2 z-50 shadow rounded-lg ${
+        className={`h-44 w-36 list-none bg-white divide-y divide-gray-100 text-xs fixed right-2 -mt-5 z-50 shadow rounded-lg ${
           !showUserMenu && "hidden"
         }`}
         onMouseEnter={() => setShowUserMenu(true)}
@@ -98,6 +102,11 @@ Journal
           </li>
         </ul>
       </div>
+      <div
+        className={`h-[75px] bg-gray-500 flex justify-between items-center  ${
+          !showBookSession && "hidden"
+        }`}
+      ></div>
     </div>
   );
 };

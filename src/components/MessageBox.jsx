@@ -95,7 +95,7 @@ const MessageBox = () => {
       <div
         className={`${
           chatOpen
-            ? "w-[340px] rounded-2xl h-[530px] bg-gray-100"
+            ? "w-[370px] rounded-2xl h-[580px] bg-gray-100"
             : "w-0 rounded-r-3xl h-0"
         }
             duration-200 mr-6 mb-1 shadow-2xl`}
@@ -106,13 +106,13 @@ const MessageBox = () => {
           } h-12 bg-gray-200 rounded-t-2xl flex justify-between items-center text-black`}
         >
           <button
-            className={`  bg-gray-300 p-1.5 rounded-full ml-2 hover:scale-110 active:scale-95`}
+            className={`  bg-gray-300 p-2 rounded-full ml-2 hover:scale-110 active:scale-95`}
             // onClick={trial}
           >
             <HiChatBubbleBottomCenter />
           </button>
           <button
-            className={`bg-gray-300 p-1.5 rounded-full mr-2 hover:scale-105 active:scale-95`}
+            className={`bg-gray-300 p-2 rounded-full mr-2 hover:scale-105 active:scale-95`}
             onClick={handleBot}
           >
             <SiChatbot />
@@ -121,7 +121,7 @@ const MessageBox = () => {
         <div
           className={`${
             !chatOpen && "hidden"
-          } flex space-x-2 mx-1 mt-2 overflow-x-auto no-scrollbar`}
+          } flex space-x-2 mx-1 mt-2 px-1.5 overflow-x-auto no-scrollbar`}
         >
           {connectedUsers.map((u) => (
             <div
@@ -137,7 +137,7 @@ const MessageBox = () => {
               }}
             >
               <img
-                className="w-8 h-8 rounded-full bg-white"
+                className="w-9 h-9 rounded-full bg-white"
                 src="/src/assets/images/userAvatar.png"
                 alt="Jese image"
               ></img>
@@ -156,7 +156,7 @@ const MessageBox = () => {
         <div
           className={`${
             !chatOpen && "hidden"
-          } block my-1 mx-1 shadow-md rounded-full  bg-gray-200`}
+          } block my-1 mx-1 py-1.5 shadow-md rounded-full  bg-gray-200`}
         >
           <span className="text-sm pl-3 font-semibold text-gray-900">
             {userData.receiverName}
@@ -167,7 +167,7 @@ const MessageBox = () => {
         <div
           className={`${
             !chatOpen && "hidden"
-          }  mx-3 mt-3 h-[340px] overflow-y-auto space-y-3 scrollbar-thin flex flex-col `}
+          }  mx-3 mt-3 h-[370px] overflow-y-auto space-y-3 scrollbar-thin flex flex-col `}
         >
           {chatMap.get(userData.receiverWebId) &&
             chatMap.get(userData.receiverWebId).map((chat, index) =>
