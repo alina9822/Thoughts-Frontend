@@ -9,7 +9,7 @@ const UserLayout = () => {
     <>
       <NavBar />
       <MessageBox />
-      <Blogs />
+      {/* <Blogs /> */}
       
     </>
   );

@@ -30,7 +30,7 @@ function Blogs() {
                   fugiat, tempora ullam non odio nulla nostrum quas corporis\
                   dolore ipsa rerum amet quisquam, culpa iste exercitationem";
 
-  const [createPost, setCreatePost] = useState(true);
+  const [createPost, setCreatePost] = useState(false);
              
  
   return (

@@ -25,8 +25,8 @@ const NavBar = () => {
       <div className="h-[75px] bg-white bg-opacity-85 flex justify-between items-center shadow-md border border-yellow-200">
         <div className="ml-5">
           {/* header */}
-          {/* <h1 className="text-2xl font-bold text-gray-800">Thoughts</h1> */}
-          <img src="src/assets/images/logo.png" className="h-[75px]" />
+          <h1 className="text-5xl font-bold text-gray-800">Thoughts</h1>
+          {/* <img src="src/assets/images/logo.png" className="h-[75px]" /> */}
         </div>
         <div className="flex justify-between items-center gap-x-6 text-navText">
           <Link
