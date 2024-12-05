@@ -18,7 +18,7 @@ const ProfilePage = () => {
   }, []);
 
   return (
-    <div className=" h-[1000px]">
+    <div className="">
       <UserLayout>
         <div className="mt-14">
           <Routes className="">

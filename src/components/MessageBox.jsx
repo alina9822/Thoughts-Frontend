@@ -95,7 +95,7 @@ const MessageBox = () => {
       <div
         className={`${
           chatOpen
-            ? "w-[370px] rounded-2xl h-[580px] bg-gray-100"
+            ? "w-[400px] rounded-2xl h-[580px] bg-gray-100"
             : "w-0 rounded-r-3xl h-0"
         }
             duration-200 mr-6 mb-1 shadow-2xl`}

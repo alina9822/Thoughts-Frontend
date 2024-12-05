@@ -5,6 +5,8 @@ import { Routes, Route, Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../contexts/UserContext";
 import { request } from "../helpers/axiosHelper";
 
+import { IoNotificationsOutline } from "react-icons/io5";
+
 const NavBar = () => {
   const { user, logout } = useContext(UserContext);
 
@@ -41,12 +43,13 @@ const NavBar = () => {
         </div>
 
         <div
-          className="mr-5 flex h-14 items-center "
+          className="mr-8 flex h-14 gap-5 items-center  "
           onMouseEnter={() => setShowUserMenu(true)}
           onMouseLeave={() => setShowUserMenu(false)}
         >
+          <IoNotificationsOutline className="size-6" />
           <img
-            className="w-8 h-8 rounded-full bg-white"
+            className="w-8 h-8 rounded-full border bg-white"
             src="/src/assets/images/userAvatar.png"
             alt="Jese image"
           ></img>
