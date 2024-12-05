@@ -91,14 +91,14 @@ const MessageBox = () => {
   };
 
   return (
-    <div className="fixed bottom-4 right-4 flex flex-col z-20">
+    <div className="fixed bottom-7 right-7 flex flex-col z-20">
       <div
         className={`${
           chatOpen
             ? "w-[400px] rounded-2xl h-[580px] bg-gray-100"
             : "w-0 rounded-r-3xl h-0"
         }
-            duration-200 mr-6 mb-1 shadow-2xl`}
+            duration-200 mr-6 mb- shadow-2xl`}
       >
         <div
           className={`${
@@ -252,10 +252,10 @@ const MessageBox = () => {
       <div className="flex justify-end">
         <button
           type="button"
-          className="bg-gray-500 rounded-full p-4 shadow-lg shadow-gray-300 hover:scale-110 active:scale-95"
+          className="bg-buttonColor rounded-full p-3.5 shadow-xl border shadow-gray-300 hover:scale-110 active:scale-95"
           onClick={() => setChatOpen(!chatOpen)}
         >
-          <TiMessages />
+          <TiMessages className="size-5" color="mainBg" />
         </button>
       </div>
     </div>

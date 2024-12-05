@@ -22,7 +22,7 @@ const NavBar = () => {
 
   return (
     <div className="fixed top-0 left-0 z-10 border-r-0  w-full ">
-      <div className="h-[80px] bg-white flex justify-between items-center shadow-md">
+      <div className="h-[75px] bg-white bg-opacity-85 flex justify-between items-center shadow-md border border-yellow-200">
         <div className="ml-5">
           {/* header */}
           {/* <h1 className="text-2xl font-bold text-gray-800">Thoughts</h1> */}
